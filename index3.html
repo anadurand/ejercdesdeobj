@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ficha de Datos</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <h1>Creando div desde un Objeto</h1>
+  <section>
+    <form onsubmit="return false">
+      <div>
+        <label for="nombre">Ingresa tu nombre: </label>
+        <input id="nombre" type="text" required>
+      </div><br>
+      <div>
+        <label for="apellido">Ingresa tu apellido: </label>
+        <input id="apellido" type="text" required>
+      </div><br>
+      <div>
+        <label for="rol">Ingresa tu Rol: </label>
+        <input id="rol" type="text" required>
+      </div><br>
+    <!--  <div>
+        <select required>
+          <option value="">Escoge tu Rol</option>
+          <option value="T.A">T.A</option>
+          <option value="Psicóloga">Pscicóloga</option>
+          <option value="Profesor">Profesor</option>
+          <option value="Jedi">Jedi</option>
+        </select>
+      </div>     quiero que ingresen el rol seleccionando de una lista dada-->
+      <div>
+        <label for="cumple">Ingresa tu Cumpleaños: </label>
+        <input id="cumple" type="text" required>
+      </div><br>
+      <button id="add-ficha">Enviar Datos</button>
+      <button id="printAll">Imprimir Todos</button>
+    </form>
+<!--
+    <div id="ficha">
+      <div>
+        <ul>
+          <li>Nombre: <span id="name"></span></li>
+          <li>Apellido: <span id="lastName"></span></li>
+          <li>Rol: <span id="status"></span></li>
+          <li>Cumpleaños: <span id="birthday"></span></li>
+        </ul>
+      </div>
+    </div>
+
+-->
+<div id="todos"></div>
+  </section>
+
+
+<script src="assets/js/js3.js" charset="utf-8"></script>
+</body>
+</html>
