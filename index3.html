@@ -19,39 +19,27 @@
         <label for="apellido">Ingresa tu apellido: </label>
         <input id="apellido" type="text" required>
       </div><br>
-      <div>
         <label for="rol">Ingresa tu Rol: </label>
+        <!--<div>
         <input id="rol" type="text" required>
-      </div><br>
-    <!--  <div>
-        <select required>
+      </div><br>-->
+      <div>
+        <select id = "rol" required>
           <option value="">Escoge tu Rol</option>
           <option value="T.A">T.A</option>
-          <option value="Psicóloga">Pscicóloga</option>
-          <option value="Profesor">Profesor</option>
+          <option value="Pscicóloga">Pscicóloga</option>
+          <option value="Profesor(a)">Profesor</option>
           <option value="Jedi">Jedi</option>
         </select>
-      </div>     quiero que ingresen el rol seleccionando de una lista dada-->
+      </div>    <!-- quiero que ingresen el rol seleccionando de una lista dada-->
       <div>
         <label for="cumple">Ingresa tu Cumpleaños: </label>
-        <input id="cumple" type="text" required>
+        <input id="cumple" type="text" placeholder=" Dia/Mes...ejemplo: 03/05"required>
       </div><br>
       <button id="add-ficha">Enviar Datos</button>
       <button id="printAll">Imprimir Todos</button>
     </form>
-<!--
-    <div id="ficha">
-      <div>
-        <ul>
-          <li>Nombre: <span id="name"></span></li>
-          <li>Apellido: <span id="lastName"></span></li>
-          <li>Rol: <span id="status"></span></li>
-          <li>Cumpleaños: <span id="birthday"></span></li>
-        </ul>
-      </div>
-    </div>
 
--->
 <div id="todos"></div>
   </section>
 

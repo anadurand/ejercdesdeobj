@@ -31,15 +31,17 @@ mostrar.onclick = function(){
   var cumple = document.getElementById("cumple").value;
 
   if(nombre != "" && apellido != "" && rol!= "" && cumple!=""){
+    if(validarCumple(cumple)){
+      var persona = new Persona(nombre, apellido, rol, cumple);
+      //ponga vacio el formulario
+      document.getElementById("todos").innerHTML = persona.print();
+      document.getElementById("nombre").value = "";
+      document.getElementById("apellido").value = "";
+      document.getElementById("rol").value = "";
+      document.getElementById("cumple").value = "";
+      arrayPersona.push(persona);
 
-    var persona = new Persona(nombre, apellido, rol, cumple);
-//ponga vacio el formulario
-    document.getElementById("todos").innerHTML = persona.print();
-    document.getElementById("nombre").value = "";
-    document.getElementById("apellido").value = "";
-    document.getElementById("rol").value = "";
-    document.getElementById("cumple").value = "";
-    arrayPersona.push(persona);
+    }
 
     }
 
@@ -52,4 +54,37 @@ print.onclick = function(){
     ficha += item.print();
   });
 document.getElementById("todos").innerHTML = ficha;
+}
+//Solo validado para que ingrese numeros correctos, todavia falta para cada mes
+function validarCumple(cumple){
+
+  cumple = cumple.split("/");
+
+  if(cumple.length==2){
+    var c= 0;
+    for(i=0; i<2; i++){
+      if(cumple[i].length == 2 && cumple[i].match(/^[0-9]+$/)){
+        if(i == 0){
+          if(parseInt(cumple[i])<=31 && parseInt(cumple[i])>0){
+             c++;
+          }else{
+            alert("Ingresar cumpleaños segun formato");
+            break;
+          }
+        }else{
+          if(parseInt(cumple[i])<=12 && parseInt(cumple[i])>0){
+            c++;
+          }else{
+            alert("Ingresar cumpleaños segun formato");
+          }
+        }
+      }else{
+        alert("Ingresar cumpleaños segun formato");
+        break;
+      }
+    }
+  }else{
+    alert("Ingresar cumpleaños segun formato");
+  }
+  if(c==2){return true;}
 }
